@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "278326872236",
+    "firebase_url": "https://air-conditioning-app.firebaseio.com",
+    "project_id": "air-conditioning-app",
+    "storage_bucket": "air-conditioning-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:278326872236:android:ee9c23d6fbfa7d271d7709",
+        "android_client_info": {
+          "package_name": "com.example.air_conditioning"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "278326872236-b3n8abbuff0lkfdmpuebnrj7maprq3eu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.air_conditioning",
+            "certificate_hash": "8a6461c66a366d95e01158b9b11d6ccaeb5d3b7c"
+          }
+        },
+        {
+          "client_id": "278326872236-q4iicp3jj7sjmtp6fmcfvs1ltbdhn3q4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrRhc5CwcUoUY2lHawNAySPMfNugmv8kM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "278326872236-q4iicp3jj7sjmtp6fmcfvs1ltbdhn3q4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
