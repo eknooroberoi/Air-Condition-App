@@ -6,141 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".Xcoord">
 
-    <EditText
-        android:id="@+id/X7"
-        android:layout_width="85dp"
-        android:layout_height="70dp"
-        android:ems="10"
-        android:hint="X7"
-        android:inputType="number"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.199"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.776" />
-
-    <EditText
-        android:id="@+id/X1"
-        android:layout_width="85dp"
-        android:layout_height="70dp"
-        android:ems="10"
-        android:hint="X1"
-        android:inputType="number"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.199"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.229" />
-
-    <EditText
-        android:id="@+id/X4"
-        android:layout_width="85dp"
-        android:layout_height="70dp"
-        android:ems="10"
-        android:hint="X4"
-        android:inputType="number"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.773"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.406" />
-
-    <EditText
-        android:id="@+id/X2"
-        android:layout_width="85dp"
-        android:layout_height="70dp"
-        android:ems="10"
-        android:hint="X2"
-        android:inputType="number"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.773"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.229" />
-
-    <EditText
-        android:id="@+id/X3"
-        android:layout_width="85dp"
-        android:layout_height="70dp"
-        android:ems="10"
-        android:hint="X3"
-        android:inputType="number"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.199"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.406" />
-
-    <EditText
-        android:id="@+id/X5"
-        android:layout_width="85dp"
-        android:layout_height="70dp"
-        android:ems="10"
-        android:hint="X5"
-        android:inputType="number"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.199"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.59" />
-
-    <EditText
-        android:id="@+id/X8"
-        android:layout_width="85dp"
-        android:layout_height="70dp"
-        android:ems="10"
-        android:hint="X8"
-        android:inputType="number"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.773"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.776" />
-
-    <EditText
-        android:id="@+id/X6"
-        android:layout_width="85dp"
-        android:layout_height="70dp"
-        android:ems="10"
-        android:hint="X6"
-        android:inputType="number"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.773"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.59" />
-
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Enter the X Coordinates"
+        android:text="Enter the (X,Y) Coordinates"
         android:textAlignment="center"
         android:textColor="#00FF0A"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.423"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.089" />
+        app:layout_constraintVertical_bias="0.045" />
+
 
     <Button
         android:id="@+id/sendx"
@@ -152,5 +33,267 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.897" />
+        app:layout_constraintVertical_bias="0.938" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="0dp"
+        android:clipToPadding="false"
+        android:fadeScrollbars="true"
+        android:fillViewport="false"
+        android:padding="0dp"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="0dp"
+        android:paddingEnd="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/sendx"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.35">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="@+id/x4"
+            app:layout_constraintTop_toBottomOf="@+id/x4">
+
+
+            <EditText
+                android:id="@+id/y1"
+                android:layout_width="95dp"
+                android:layout_height="67dp"
+                android:ems="10"
+                android:inputType="number"
+                android:hint="Y1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.662"
+                app:layout_constraintStart_toEndOf="@+id/x1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.046" />
+
+            <EditText
+                android:id="@+id/x1"
+                android:layout_width="95dp"
+                android:layout_height="67dp"
+                android:ems="10"
+                android:hint="X1"
+                android:inputType="number"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.095"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.046" />
+
+            <EditText
+                android:id="@+id/y2"
+                android:layout_width="95dp"
+                android:layout_height="67dp"
+                android:ems="10"
+                android:inputType="number"
+                android:hint="Y2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.66"
+                app:layout_constraintStart_toEndOf="@+id/x2"
+                app:layout_constraintTop_toBottomOf="@+id/y1"
+                app:layout_constraintVertical_bias="0.053" />
+
+            <EditText
+                android:id="@+id/x2"
+                android:layout_width="95dp"
+                android:layout_height="67dp"
+                android:ems="10"
+                android:inputType="number"
+                android:hint="X2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.097"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/x1"
+                app:layout_constraintVertical_bias="0.053" />
+
+            <EditText
+                android:id="@+id/y3"
+                android:layout_width="95dp"
+                android:layout_height="67dp"
+                android:ems="10"
+                android:inputType="number"
+                android:hint="Y3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.66"
+                app:layout_constraintStart_toEndOf="@+id/x3"
+                app:layout_constraintTop_toBottomOf="@+id/y2"
+                app:layout_constraintVertical_bias="0.072" />
+
+            <EditText
+                android:id="@+id/x3"
+                android:layout_width="95dp"
+                android:layout_height="67dp"
+                android:layout_marginTop="28dp"
+                android:ems="10"
+                android:inputType="number"
+                android:hint="X3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.097"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/x2"
+                app:layout_constraintVertical_bias="0.029" />
+
+            <EditText
+                android:id="@+id/y4"
+                android:layout_width="95dp"
+                android:layout_height="67dp"
+                android:ems="10"
+                android:inputType="number"
+                android:hint="Y4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.66"
+                app:layout_constraintStart_toEndOf="@+id/x4"
+                app:layout_constraintTop_toBottomOf="@+id/y3"
+                app:layout_constraintVertical_bias="0.109" />
+
+            <EditText
+                android:id="@+id/x4"
+                android:layout_width="95dp"
+                android:layout_height="67dp"
+                android:layout_marginTop="28dp"
+                android:ems="10"
+                android:inputType="number"
+                android:hint="X4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.097"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/x3"
+                app:layout_constraintVertical_bias="0.053" />
+
+            <EditText
+                android:id="@+id/y5"
+                android:layout_width="95dp"
+                android:layout_height="67dp"
+                android:ems="10"
+                android:inputType="number"
+                android:hint="Y5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.66"
+                app:layout_constraintStart_toEndOf="@+id/x5"
+                app:layout_constraintTop_toBottomOf="@+id/y4"
+                app:layout_constraintVertical_bias="0.131" />
+
+            <EditText
+                android:id="@+id/x5"
+                android:layout_width="95dp"
+                android:layout_height="67dp"
+                android:layout_marginTop="28dp"
+                android:ems="10"
+                android:inputType="number"
+                android:hint="X5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.097"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/x4"
+                app:layout_constraintVertical_bias="0.053" />
+
+            <EditText
+                android:id="@+id/y6"
+                android:layout_width="95dp"
+                android:layout_height="67dp"
+                android:ems="10"
+                android:inputType="number"
+                android:hint="Y6"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.66"
+                app:layout_constraintStart_toEndOf="@+id/x6"
+                app:layout_constraintTop_toBottomOf="@+id/y5"
+                app:layout_constraintVertical_bias="0.172" />
+
+            <EditText
+                android:id="@+id/x6"
+                android:layout_width="95dp"
+                android:layout_height="67dp"
+                android:layout_marginTop="28dp"
+                android:ems="10"
+                android:inputType="number"
+                android:hint="X6"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.097"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/x5"
+                app:layout_constraintVertical_bias="0.053" />
+
+            <EditText
+                android:id="@+id/y7"
+                android:layout_width="95dp"
+                android:layout_height="67dp"
+                android:ems="10"
+                android:inputType="number"
+                android:hint="Y7"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.66"
+                app:layout_constraintStart_toEndOf="@+id/x7"
+                app:layout_constraintTop_toBottomOf="@+id/y6"
+                app:layout_constraintVertical_bias="0.265" />
+
+            <EditText
+                android:id="@+id/x7"
+                android:layout_width="95dp"
+                android:layout_height="67dp"
+                android:layout_marginTop="28dp"
+                android:ems="10"
+                android:inputType="number"
+                android:hint="X7"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.097"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/x6"
+                app:layout_constraintVertical_bias="0.053" />
+
+            <EditText
+                android:id="@+id/y8"
+                android:layout_width="95dp"
+                android:layout_height="67dp"
+                android:ems="10"
+                android:inputType="number"
+                android:hint="Y8"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.66"
+                app:layout_constraintStart_toEndOf="@+id/x8"
+                app:layout_constraintTop_toBottomOf="@+id/y7"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <EditText
+                android:id="@+id/x8"
+                android:layout_width="95dp"
+                android:layout_height="67dp"
+                android:layout_marginTop="28dp"
+                android:ems="10"
+                android:inputType="number"
+                android:hint="X8"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.097"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/x7"
+                app:layout_constraintVertical_bias="1.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
