@@ -1,14 +1,77 @@
 package com.example.air_conditioning;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.webkit.CookieManager;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class Ycoord extends AppCompatActivity {
 
+    WebView wv;
+    TextView tv;
+
+    DatabaseReference myipRef=FirebaseDatabase.getInstance().getReferenceFromUrl("https://air-conditioning-app.firebaseio.com/");
+    private static final String TAG = "PostDetailActivity";
+
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ycoord);
+        tv=findViewById(R.id.textView2);
+        wv=findViewById(R.id.plotview);
+        wv.setWebViewClient(new WebViewClient());
+        final WebSettings settings = wv.getSettings();
+        settings.setLoadsImagesAutomatically(true);
+        settings.setJavaScriptEnabled(true);
+        settings.setDomStorageEnabled(true);
+        settings.setAppCacheEnabled(true);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            settings.setSafeBrowsingEnabled(false);
+            settings.setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
+        }
+        wv.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            CookieManager.getInstance().setAcceptThirdPartyCookies(wv, true);
+        }
+
+        // Extras tried for Android 9.0, can be removed if want.
+        settings.setAllowContentAccess(true);
+        settings.setAllowFileAccess(true);
+        settings.setBlockNetworkImage(false);
+
+        myipRef.child("ip").addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                String ip = dataSnapshot.getValue(String.class);
+                ip="http://"+ip+":5006/sample";
+                Toast.makeText(Ycoord.this, ip+" toasted", Toast.LENGTH_LONG).show();
+                wv.loadUrl(ip);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                Log.w(TAG, "loadPost:onCancelled", databaseError.toException());
+            }
+        });
+
+
     }
 }
