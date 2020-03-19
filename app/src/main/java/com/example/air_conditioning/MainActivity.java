@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
                 FirebaseUser user=mAuth.getCurrentUser();
                 if( user!=null){
                     Toast.makeText(MainActivity.this,"You are logged in",Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(MainActivity.this, GraphPage.class));
+                    startActivity(new Intent(MainActivity.this, Ycoord.class));
                 }
                 else
                     Toast.makeText(MainActivity.this,"You have to login first.",Toast.LENGTH_SHORT).show();
@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
                                 Toast.makeText(MainActivity.this,"Invalid username or password", Toast.LENGTH_SHORT).show();
                             }
                             else{
-                                startActivity(new Intent(MainActivity.this, GraphPage.class));
+                                startActivity(new Intent(MainActivity.this, Ycoord.class));
                             }
                         }
                     });

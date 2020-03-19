@@ -1,11 +1,18 @@
 package com.example.air_conditioning;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.webkit.CookieManager;
 import android.webkit.WebSettings;
@@ -14,18 +21,26 @@ import android.webkit.WebViewClient;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class Ycoord extends AppCompatActivity {
+public class Ycoord extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     WebView wv;
     TextView tv;
 
-    DatabaseReference myipRef=FirebaseDatabase.getInstance().getReferenceFromUrl("https://air-conditioning-app.firebaseio.com/");
+    DrawerLayout dl;
+    NavigationView nv;
+    Toolbar tb;
+    FirebaseAuth mAuth;
+    FirebaseAuth.AuthStateListener mauthListener;
+
+    DatabaseReference myipRef = FirebaseDatabase.getInstance().getReferenceFromUrl("https://air-conditioning-app.firebaseio.com/");
     private static final String TAG = "PostDetailActivity";
 
     @RequiresApi(api = Build.VERSION_CODES.O)
@@ -33,8 +48,19 @@ public class Ycoord extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ycoord);
-        tv=findViewById(R.id.textView2);
-        wv=findViewById(R.id.plotview);
+        dl = findViewById(R.id.drawer_layoutplot);
+        nv = findViewById(R.id.nav_viewplot);
+        tb = findViewById(R.id.toolbarplot);
+
+        setSupportActionBar(tb);
+
+        nv.bringToFront();
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, dl, tb, R.string.nd_open, R.string.nd_close);
+        dl.addDrawerListener(toggle);
+        toggle.syncState();
+
+        tv = findViewById(R.id.textView2);
+        wv = findViewById(R.id.plotview);
         wv.setWebViewClient(new WebViewClient());
         final WebSettings settings = wv.getSettings();
         settings.setLoadsImagesAutomatically(true);
@@ -61,8 +87,8 @@ public class Ycoord extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 String ip = dataSnapshot.getValue(String.class);
-                ip="http://"+ip+":5006/sample";
-                Toast.makeText(Ycoord.this, ip+" toasted", Toast.LENGTH_LONG).show();
+                ip = "http://" + ip + ":5006/sample";
+                Toast.makeText(Ycoord.this, "Please Wait! This might take a while!", Toast.LENGTH_LONG).show();
                 wv.loadUrl(ip);
             }
 
@@ -71,7 +97,37 @@ public class Ycoord extends AppCompatActivity {
                 Log.w(TAG, "loadPost:onCancelled", databaseError.toException());
             }
         });
+        nv.setNavigationItemSelectedListener(this);
 
+    }
 
+    @Override
+    public void onBackPressed() {
+        if (dl.isDrawerOpen(GravityCompat.START)) {
+            dl.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+        switch (item.getItemId()) {
+            case R.id.logout:
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(Ycoord.this, MainActivity.class));
+                break;
+            case R.id.xycoord:
+                startActivity(new Intent(Ycoord.this, Xcoord.class));
+                break;
+            case R.id.surfaceplot:
+                startActivity(new Intent(Ycoord.this, Ycoord.class));
+                break;
+            case R.id.contactus:
+                startActivity(new Intent(Ycoord.this, showup.class));
+                break;
+        }
+        return true;
     }
 }

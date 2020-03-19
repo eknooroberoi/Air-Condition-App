@@ -59,7 +59,7 @@ public class SignUp extends AppCompatActivity {
                                 Toast.makeText(SignUp.this,"Sign Up Unsuccessful", Toast.LENGTH_SHORT).show();
                             }
                             else{
-                                startActivity(new Intent(SignUp.this, GraphPage.class));
+                                startActivity(new Intent(SignUp.this, Ycoord.class));
                             }
                         }
                     });

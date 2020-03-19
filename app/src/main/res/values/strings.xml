@@ -18,4 +18,22 @@
     <string name="title_activity_graph_disp">ActivityGraphDisp</string>
     <string name="nd_open">Open Navigation Drawer</string>
     <string name="nd_close">Close Navigation Drawer</string>
+    <string name="enterxy">Enter the (X,Y) Coordinates</string>
+    <string name="send">Send</string>
+    <string name="y1">Y1</string>
+    <string name="x1">X1</string>
+    <string name="y2">Y2</string>
+    <string name="x2">X2</string>
+    <string name="y3">Y3</string>
+    <string name="x3">X3</string>
+    <string name="y4">Y4</string>
+    <string name="x4">X4</string>
+    <string name="y5">Y5</string>
+    <string name="x5">X5</string>
+    <string name="y6">Y6</string>
+    <string name="x6">X6</string>
+    <string name="y7">Y7</string>
+    <string name="x7">X7</string>
+    <string name="y8">Y8</string>
+    <string name="x8">X8</string>
 </resources>
