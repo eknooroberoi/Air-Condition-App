@@ -70,32 +70,44 @@ public class showup extends AppCompatActivity {
         eknoormail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String phone=eknoormail.getText().toString();
-                String s= "mailto:" + phone;
-                Intent intent=new Intent(Intent.ACTION_SEND);
-                intent.setData(Uri.parse(s));
-                startActivity(intent);
+              sendMail1();
             }
         });
         sharathmail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String phone=sharathmail.getText().toString();
-                String s= "mailto:" + phone;
-                Intent intent=new Intent(Intent.ACTION_SEND);
-                intent.setData(Uri.parse(s));
-                startActivity(intent);
+                sendMail2();
             }
         });
         raheemmail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String phone=raheemmail.getText().toString();
-                String s= "mailto:" + phone;
-                Intent intent=new Intent(Intent.ACTION_SEND);
-                intent.setData(Uri.parse(s));
-                startActivity(intent);
+                sendMail3();
             }
         });
+    }
+    private void sendMail1(){
+        String recepient= eknoormail.getText().toString();
+        String recepientlist[]=recepient.split(",");
+        Intent intent= new Intent(Intent.ACTION_SEND);
+        intent.putExtra(Intent.EXTRA_EMAIL,recepientlist);
+        intent.setType("message/rfc822");
+        startActivity(Intent.createChooser(intent, " choose an email client"));
+    }
+    private void sendMail2(){
+        String recepient= sharathmail.getText().toString();
+        String recepientlist[]=recepient.split(",");
+        Intent intent= new Intent(Intent.ACTION_SEND);
+        intent.putExtra(Intent.EXTRA_EMAIL,recepientlist);
+        intent.setType("message/rfc822");
+        startActivity(Intent.createChooser(intent, " choose an email client"));
+    }
+    private void sendMail3(){
+        String recepient= raheemmail.getText().toString();
+        String recepientlist[]=recepient.split(",");
+        Intent intent= new Intent(Intent.ACTION_SEND);
+        intent.putExtra(Intent.EXTRA_EMAIL,recepientlist);
+        intent.setType("message/rfc822");
+        startActivity(Intent.createChooser(intent, " choose an email client"));
     }
 }
