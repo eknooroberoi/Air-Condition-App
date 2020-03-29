@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:278326872236:android:ee9c23d6fbfa7d271d7709",
         "android_client_info": {
-          "package_name": "com.example.air_conditioning"
+          "package_name": "com.surfaceplot.air_conditioning"
         }
       },
       "oauth_client": [
@@ -18,7 +18,7 @@
           "client_id": "278326872236-b3n8abbuff0lkfdmpuebnrj7maprq3eu.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.air_conditioning",
+            "package_name": "com.surfaceplot.air_conditioning",
             "certificate_hash": "8a6461c66a366d95e01158b9b11d6ccaeb5d3b7c"
           }
         },

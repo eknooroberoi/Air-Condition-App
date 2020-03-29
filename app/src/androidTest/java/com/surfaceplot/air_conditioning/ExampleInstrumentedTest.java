@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.example.air_conditioning", appContext.getPackageName());
+        assertEquals("com.surfaceplot.air_conditioning", appContext.getPackageName());
     }
 }
