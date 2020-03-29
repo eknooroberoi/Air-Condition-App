@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.air_conditioning">
+    package="com.surfaceplot.air_conditioning">
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.CALL_PHONE"/>
     <application
@@ -14,12 +14,12 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
 
-        <activity android:name=".showup"/>
-        <activity android:name=".Ycoord" />
-        <activity android:name=".Xcoord" />
-        <activity android:name=".GraphPage" />
-        <activity android:name=".SignUp" />
-        <activity android:name=".MainActivity">
+        <activity android:name="com.surfaceplot.air_conditioning.showup"/>
+        <activity android:name="com.surfaceplot.air_conditioning.Ycoord" />
+        <activity android:name="com.surfaceplot.air_conditioning.Xcoord" />
+        <activity android:name="com.surfaceplot.air_conditioning.GraphPage" />
+        <activity android:name="com.surfaceplot.air_conditioning.SignUp" />
+        <activity android:name="com.surfaceplot.air_conditioning.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

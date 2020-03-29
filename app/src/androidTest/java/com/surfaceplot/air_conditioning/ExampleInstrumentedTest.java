@@ -1,4 +1,4 @@
-package com.example.air_conditioning;
+package com.surfaceplot.air_conditioning;
 
 import android.content.Context;
 import androidx.test.platform.app.InstrumentationRegistry;

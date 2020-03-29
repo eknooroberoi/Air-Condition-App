@@ -1,4 +1,4 @@
-package com.example.air_conditioning;
+package com.surfaceplot.air_conditioning;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
