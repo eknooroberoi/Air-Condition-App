@@ -23,6 +23,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.HashMap;
 import java.util.Map;
 
+//activity where coodinates are entered
+
 public class Xcoord extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private FirebaseDatabase database = FirebaseDatabase.getInstance();

@@ -31,6 +31,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+//landing activity where graph is displayed
+
 public class Ycoord extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     WebView wv;
