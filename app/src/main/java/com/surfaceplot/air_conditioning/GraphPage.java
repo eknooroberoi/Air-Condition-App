@@ -16,6 +16,10 @@ import android.widget.Button;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
+
+//landing blank page. Never used
+
+
 public class GraphPage extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     Button lobt;
